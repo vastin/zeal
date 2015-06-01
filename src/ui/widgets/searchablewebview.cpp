@@ -55,6 +55,16 @@ void SearchableWebView::setPage(QWebPage *page)
     });
 }
 
+QUrl SearchableWebView::url() const
+{
+    return m_webView->url();
+}
+
+QString SearchableWebView::title() const
+{
+    return m_webView->title();
+}
+
 int SearchableWebView::zoomFactor() const
 {
     return m_webView->zealZoomFactor();

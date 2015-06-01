@@ -5,7 +5,6 @@
 
 class QLocalServer;
 
-class MainWindow;
 
 class QNetworkAccessManager;
 class QNetworkReply;
@@ -15,6 +14,10 @@ namespace Zeal {
 
 class DocsetRegistry;
 class SearchQuery;
+
+namespace WidgetUi {
+class MainWindow;
+}
 
 namespace Core {
 
@@ -64,7 +67,7 @@ private:
 
     DocsetRegistry *m_docsetRegistry = nullptr;
 
-    MainWindow *m_mainWindow = nullptr;
+    WidgetUi::MainWindow *m_mainWindow = nullptr;
 };
 
 } // namespace Core

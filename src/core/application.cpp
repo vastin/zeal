@@ -4,7 +4,7 @@
 #include "settings.h"
 #include "registry/docsetregistry.h"
 #include "registry/searchquery.h"
-#include "ui/mainwindow.h"
+#include "ui/mainwindow2.h"
 #include "util/version.h"
 
 #include <QCoreApplication>
@@ -51,7 +51,7 @@ Application::Application(const SearchQuery &query, QObject *parent) :
     m_docsetRegistry = new DocsetRegistry();
     m_docsetRegistry->init(m_settings->docsetPath);
 
-    m_mainWindow = new MainWindow(this);
+    m_mainWindow = new WidgetUi::MainWindow(this);
 
     // Server for detecting already running instances
     connect(m_localServer, &QLocalServer::newConnection, [this]() {
@@ -64,7 +64,7 @@ Application::Application(const SearchQuery &query, QObject *parent) :
             in >> query;
             m_mainWindow->bringToFront(query);
         } else {
-            m_mainWindow->bringToFront();
+            m_mainWindow->bringToFront(SearchQuery());
         }
     });
     /// TODO: Verify if removeServer() is needed

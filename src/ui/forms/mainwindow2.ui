@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow2</class>
+ <widget class="QMainWindow" name="MainWindow2">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QTabWidget" name="tabWidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="actionOptions"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="actionReportProblem"/>
+    <addaction name="actionCheckForUpdate"/>
+    <addaction name="separator"/>
+    <addaction name="actionAboutZeal"/>
+    <addaction name="actionAboutQt"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>&amp;View</string>
+    </property>
+    <addaction name="actionBack"/>
+    <addaction name="actionForward"/>
+   </widget>
+   <widget class="QMenu" name="menuTabs">
+    <property name="title">
+     <string>&amp;Tabs</string>
+    </property>
+    <addaction name="actionNewTab"/>
+    <addaction name="actionCloseTab"/>
+    <addaction name="separator"/>
+    <addaction name="actionNextTab"/>
+    <addaction name="actionPreviousTab"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuView"/>
+   <addaction name="menuTabs"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <action name="actionQuit">
+   <property name="text">
+    <string>&amp;Quit</string>
+   </property>
+  </action>
+  <action name="actionOptions">
+   <property name="text">
+    <string>&amp;Options</string>
+   </property>
+  </action>
+  <action name="actionAboutZeal">
+   <property name="text">
+    <string>About &amp;Zeal</string>
+   </property>
+  </action>
+  <action name="actionAboutQt">
+   <property name="text">
+    <string>About &amp;Qt</string>
+   </property>
+  </action>
+  <action name="actionBack">
+   <property name="text">
+    <string>&amp;Back</string>
+   </property>
+  </action>
+  <action name="actionForward">
+   <property name="text">
+    <string>&amp;Forward</string>
+   </property>
+  </action>
+  <action name="actionNewTab">
+   <property name="text">
+    <string>New Tab</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+T</string>
+   </property>
+  </action>
+  <action name="actionCloseTab">
+   <property name="text">
+    <string>Close Tab</string>
+   </property>
+  </action>
+  <action name="actionNextTab">
+   <property name="text">
+    <string>Next Tab</string>
+   </property>
+  </action>
+  <action name="actionPreviousTab">
+   <property name="text">
+    <string>Previous Tab</string>
+   </property>
+  </action>
+  <action name="actionReportProblem">
+   <property name="text">
+    <string>&amp;Report Problem...</string>
+   </property>
+  </action>
+  <action name="actionCheckForUpdate">
+   <property name="text">
+    <string>&amp;Check for Update...</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

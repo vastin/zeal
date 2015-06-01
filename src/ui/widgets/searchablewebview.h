@@ -26,6 +26,9 @@ public:
     bool canGoForward() const;
     void setPage(QWebPage *page);
 
+    QUrl url() const;
+    QString title() const;
+
     int zoomFactor() const;
     void setZoomFactor(int value);
 

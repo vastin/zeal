@@ -7,7 +7,8 @@ SOURCES += \
     $$files($$PWD/widgets/*.cpp)
 
 FORMS += \
-    $$files($$PWD/forms/*.ui)
+    $$files($$PWD/forms/*.ui) \
+    $$PWD/widgets/tab.ui
 
 unix:!macx {
     packagesExist(appindicator-0.1) {
