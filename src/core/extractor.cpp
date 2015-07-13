@@ -15,11 +15,11 @@ Extractor::Extractor(QObject *parent) :
 void Extractor::extract(const QString &filePath, const QString &destination, const QString &root)
 {
     ExtractInfo info = {
-        .extractor = this,
-        .archiveHandle = archive_read_new(),
-        .filePath = filePath,
-        .totalBytes = QFileInfo(filePath).size(),
-        .extractedBytes = 0
+        this,
+        archive_read_new(),
+        filePath,
+        QFileInfo(filePath).size(),
+        0
     };
 
     archive_read_support_filter_all(info.archiveHandle);
